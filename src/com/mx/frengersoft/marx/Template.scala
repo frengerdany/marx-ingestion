@@ -26,9 +26,9 @@ object Template {
     }
   }
 
-  def cargaTemplate(nombreTemplate: String) {
+  def cargaTemplate(rutaTemplate: String) {
 
-    var rutaTemplate = Template.initVariablesArchivoTemplate.rutaRepositorioTemplates + nombreTemplate
+    //var rutaTemplate = Template.initVariablesArchivoTemplate.rutaRepositorioTemplates + nombreTemplate
     val templateFile = scala.io.Source.fromFile(rutaTemplate)
 
     //se extrae la primera linea del archivo con la informacion del proceso

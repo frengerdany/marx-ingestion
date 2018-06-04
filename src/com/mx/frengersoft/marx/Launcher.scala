@@ -30,11 +30,11 @@ object Launcher {
     println("Hora de inicio: " + ModuloVariablesTiempo.horaInicio)
 
     //  Carga de templates -------------------------------------------------------------------
-    Template.cargaTemplate("DOIMSSTemplate.csv")
+    Template.cargaTemplate("/Users/Frengerdany/Development/data/schema/DOIMSSTemplate.csv")
 
     //  Carga de archivo a validar ----------------------------------------------------------
     val in = new Input()
-    in.cargaArchivoProceso(in.initModuloVariablesArchivoEntrada.nombreArchivo)
+    in.cargaArchivoProceso("/Users/Frengerdany/Development/data/in/doimss.dat")
 
     val horaFin = Calendar.getInstance.getTime
     var horaFinMiliSegundos = horaFin.getTime

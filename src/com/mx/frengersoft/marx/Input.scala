@@ -18,11 +18,11 @@ class Input {
   def cargaArchivoProceso(nombreArchivo: String) {
 
     //carga de archivo
-    val archivoProceso = initModuloVariablesArchivoEntrada.rutaArchivoEntrada + nombreArchivo
-    val file = Source.fromFile(archivoProceso)
+    //val archivoProceso = initModuloVariablesArchivoEntrada.rutaArchivoEntrada + nombreArchivo
+    val file = Source.fromFile(nombreArchivo)
 
-    var rutaSalidaContenido = Launcher.initModuloVariablesArchivoSalida.rutaArchivoSalida + Launcher.initModuloVariablesArchivoSalida.nombreArchivoSalidaValidacionContenido + Launcher.ModuloVariablesTiempo.horaInicio.toString + ".csv"
-    var rutaSalidaEstructura = Launcher.initModuloVariablesArchivoSalida.rutaArchivoSalida + Launcher.initModuloVariablesArchivoSalida.nombreArchivoSalidaValidacionEstructura + Launcher.ModuloVariablesTiempo.horaInicio.toString + ".csv"
+    var rutaSalidaContenido =  Launcher.initModuloVariablesArchivoSalida.nombreArchivoSalidaValidacionContenido + Launcher.ModuloVariablesTiempo.horaInicio.toString + ".csv"
+    var rutaSalidaEstructura =  Launcher.initModuloVariablesArchivoSalida.nombreArchivoSalidaValidacionEstructura + Launcher.ModuloVariablesTiempo.horaInicio.toString + ".csv"
 
     var rutaSalidaValido = Launcher.initModuloVariablesArchivoSalida.rutaArchivoSalida + Launcher.initModuloVariablesArchivoSalida.nombreArchivoSalidaValido + Launcher.ModuloVariablesTiempo.horaInicio.toString + ".dat"
     val archivoSalidaContenido = new PrintWriter(new File(rutaSalidaContenido))
@@ -32,6 +32,8 @@ class Input {
     //val archivoSalidaValido = new PrintWriter(new File(rutaSalidaValido))
 
     val cabeceraArchivo = """"ID_ARCHIVO","FOLIO","FECHA_CARGA","DETALLE","NO_LINEA","CAMPO","VALIDACION","VALOR_CAMPO","COD_ERROR","DESC_ERROR","VALOR_A_VALIDAR"""" + sys.props("line.separator")
+
+    //ARCHIVOS DE VALIDACION DE SALIDA
     archivoSalidaContenido.write(cabeceraArchivo)
     archivoSalidaEstructura.write(cabeceraArchivo)
 

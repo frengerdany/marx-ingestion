@@ -45,3 +45,8 @@ Denle Run a Launcher y crucen los dedos.
 
 Si todo salio bien les debera de generar dos csv con los resultados de validaciones de estructura y contenido,
 si solo estan las cabeceras es que el archivo no presenta errores.
+
+
+URL del drive con los archivos de prueba:
+
+https://drive.google.com/open?id=1DXlAM1xcXWNYr87KqaTJQBoWRDGvGPMD
